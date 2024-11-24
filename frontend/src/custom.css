@@ -1,0 +1,86 @@
+/* Основные цвета из гайдлайна */
+:root {
+    --accent-orange: #f5550a; /* Оранжевый */
+    --accent-yellow: #ffd264; /* Желтый */
+    --background-light: #f9f9f9; /* Светлый фон */
+    --text-light: #ffffff; /* Белый */
+    --text-dark: #323232; /* Темно-серый */
+  }
+  
+  /* Общий стиль для всего приложения */
+  body {
+    background-color: var(--background-light);
+    font-family: 'Actay Regular', sans-serif;
+    color: var(--text-dark);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Actay Wide Bold', sans-serif;
+    color: var(--text-dark);
+  }
+  
+  /* Стили для кнопок на формах */
+  .btn-custom {
+    background-color: var(--accent-orange); /* Постоянный цвет кнопки */
+    color: var(--text-light);
+    border: none;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-custom:hover {
+    background-color: var(--accent-yellow); /* Цвет при наведении */
+    color: var(--text-dark);
+    text-decoration: none;
+  }
+  
+  /* Стили для навбара */
+  .navbar {
+    background-color: var(--text-dark); /* Темно-серый */
+  }
+  
+  .navbar-brand {
+    color: var(--text-light); /* Логотип остаётся белым */
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+  
+  .navbar-brand:hover {
+    color: var(--accent-orange); /* Логотип меняет цвет на оранжевый при наведении */
+  }
+  
+  /* Кнопки навбара */
+  .nav-link {
+    color: var(--text-light); /* Белый текст для кнопок */
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease, border-color 0.3s ease;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav-link:hover {
+    color: var(--text-light); /* Цвет текста не меняется при наведении */
+    text-decoration: none;
+  }
+  
+  /* Активная ссылка с оранжевой полоской */
+  .nav-link.active {
+    color: var(--text-light); /* Белый текст остаётся */
+  }
+  
+  .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Расстояние от текста до полосы */
+    left: 0;
+    right: 0;
+    height: 2px; /* Толщина полосы */
+    background-color: var(--accent-orange); /* Оранжевая полоса */
+    transition: width 0.3s ease;
+  }
+  
